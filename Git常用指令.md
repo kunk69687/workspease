@@ -37,4 +37,23 @@
 ## 3. 常见词汇解释
 - **Origin**: 远程仓库的代称（通常指 GitHub）。
 - **Main/Master**: 默认的主分支。
-- **Commit**: 一个“版本”或“快照”，记录了那一刻所有文件的样子。
+---
+
+## 4. 多电脑协同（在新电脑上设置）
+
+### **第一次同步到新电脑**
+1. 在新电脑上安装 Git。
+2. 运行克隆命令：
+   `git clone https://github.com/kunk69687/workspease.git`
+   *(当提示输入密码时，请使用您的 **Access Token**)*
+
+### **设置身份（只需执行一次）**
+- `git config --global user.name "kun"`
+- `git config --global user.email "kunk69687@gmail.com"`
+
+### **让 Git 记住令牌（不用每次输密码）**
+- `git config --global credential.helper store`
+
+### **两台电脑切换时的日常流程**
+1. **开工前**：先 `git pull`（接棒：获取另一台电脑的最新改动）。
+2. **完工后**：`git add .` -> `git commit -m "..." ` -> `git push`（传棒：把改动传回云端）。
