@@ -1,1 +1,17 @@
-2026-05-04 [Ingest] Moved 'Git常用指令.md' to Notes/ and updated index.
+## 2026-05-05
+
+### 整理 Inbox 机器人笔记
+
+- 工作模式：Ingest
+- 输入来源：`Inbox/1/`
+- 新增笔记：
+    - [[机械臂操作空间控制笔记]] (Notes/)
+    - [[GraspNet项目与抓取数据集概览]] (Notes/)
+    - [[工业级混合视觉抓取系统技术笔记]] (Notes/)
+- 更新项目：
+    - [[OpenArm]]：初始化项目文件夹，移动并关联遥操作相关笔记。
+    - [[VisionGraspSystem]]：初始化项目文件夹，关联混合抓取系统笔记。
+- 建立链接：
+    - 将相关 Notes 链接至项目主页。
+    - 更新 [[System/index.md]] 索引。
+- 处理结果：已完成机器人与 3D 视觉板块的初步整理。
