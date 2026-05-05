@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Projects/OpenArm/项目架构解析：`franka_controllers_real`.md",
+                "file": "Notes/GraspNet项目与抓取数据集笔记.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "项目架构解析：`franka_controllers_real`"
+              "title": "GraspNet项目与抓取数据集笔记"
             }
           }
         ]
@@ -185,11 +185,13 @@
   },
   "active": "09874664a5cdd26e",
   "lastOpenFiles": [
+    "Notes/OpenArm系统启动与调试记录.md",
     "Projects/OpenArm/项目日志.md",
+    "Projects/OpenArm/OpenArm项目架构解析-franka_controllers_real.md",
+    "Projects/OpenArm/OpenArm系统Servo配置与验证.md",
+    "Projects/OpenArm/OpenArm.md",
     "Projects/OpenArm/项目架构解析：`franka_controllers_real`.md",
     "Projects/OpenArm/工作1.md",
-    "Projects/OpenArm/OpenArm.md",
-    "Notes/OpenArm系统启动与调试记录.md",
     "System/log.md",
     "未命名.md",
     "OpenClaw安装教程.md"
