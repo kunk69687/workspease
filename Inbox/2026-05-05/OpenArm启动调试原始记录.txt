@@ -1,0 +1,74 @@
+ip link show can0
+：这其实只是一个“检查”动作，确认系统是否识别到了你的 USB 转 CAN 适配器。 
+
+openarm-can-configure-socketcan can0 -fd -b 1000000 -d 5000000
+openarm-can-configure-socketcan can1 -fd -b 1000000 -d 5000000
+
+# 记得先 source 一下（如果在这个窗口没 source 过的话）
+source ~/openarm/install/setup.bash
+
+# 再次启动
+假启动
+ros2 launch openarm_bimanual_moveit_config demo.launch.py arm_type:=v10 use_fake_hardware:=true
+带电机启动
+ros2 launch openarm_bimanual_moveit_config demo.launch.py arm_type:=v10
+
+
+左臂测试
+ros2 action send_goal /left_joint_trajectory_controller/follow_joint_trajectory \
+control_msgs/action/FollowJointTrajectory \
+'{trajectory: {joint_names: ["openarm_left_joint1", "openarm_left_joint2", "openarm_left_joint3", "openarm_left_joint4", "openarm_left_joint5", "openarm_left_joint6", "openarm_left_joint7"], points: [{positions: [0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15], time_from_start: {sec: 3, nanosec: 0}}]}}'
+右
+ros2 action send_goal /right_joint_trajectory_controller/follow_joint_trajectory \
+control_msgs/action/FollowJointTrajectory \
+'{trajectory: {joint_names: ["openarm_right_joint1", "openarm_right_joint2", "openarm_right_joint3", "openarm_right_joint4", "openarm_right_joint5", "openarm_right_joint6", "openarm_right_joint7"], points: [{positions: [0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15], time_from_start: {sec: 3, nanosec: 0}}]}}'
+
+
+
+查看它的“神经网络”数据流
+再开一个终端，输入：
+Bash
+ros2 topic list
+
+运行这个命令查看控制器到底在管哪些关节：
+
+Bash
+ros2 control list_controllers
+
+观察“控制误差”
+当机械臂动的时候，新开终端输入：
+Bash
+ros2 topic echo /joint_trajectory_controller/state
+你会看到一个 error 字段。在 fake_hardware 模式下它几乎为 0，但以后接上真机，这个数值能帮你判断电机是不是“堵转”了或者力矩不够。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+零位校准一次只作一臂 。
+Run the zero position calibration (this defaults to can 0, right arm):
+运行零位校准（默认为右臂罐头0）：
+右
+openarm-can-zero-position-calibration --canport can0 --arm-side right_arm
+左
+openarm-can-zero-position-calibration --canport can1 --arm-side left_arm
+针对特定武器，可以运行：
+
+# Leader-side Left
+openarm-can-zero-position-calibration --canport can1 --arm_side left_arm
+# Follower-side Right
+openarm-can-zero-position-calibration --canport can2 --arm_side right_arm
+# Follower-side Left
+openarm-can-zero-position-calibration --canport can3 --arm_side left_arm
+
+
+
