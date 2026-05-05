@@ -1,19 +1,12 @@
 ## 2026-05-05
 
-### 整理 Inbox 机器人笔记
+### 规范化 OpenArm 项目笔记
 
-- 工作模式：Ingest
-- 输入来源：`Inbox/1/`
-- 新增笔记：
-    - [[机械臂操作空间控制笔记]] (Notes/)
-    - [[GraspNet项目与抓取数据集概览]] (Notes/)
-    - [[工业级混合视觉抓取系统技术笔记]] (Notes/)
-- 更新项目：
-    - [[OpenArm]]：初始化项目文件夹，移动并关联遥操作相关笔记；新增 [[OpenArm系统启动与调试记录]]。
-    - [[VisionGraspSystem]]：初始化项目文件夹，关联混合抓取系统笔记。
-- 建立链接：
-    - 将相关 Notes 链接至项目主页。
-    - 更新 [[System/index.md]] 索引。
-- 新增笔记：
-    - [[OpenArm系统启动与调试记录]]：整理自用户提供的原始调试笔记。
-- 处理结果：已完成机器人与 3D 视觉板块的初步整理。
+- 工作模式：Lint / Ingest
+- 动作：
+    - 将 `Projects/OpenArm/` 下的原始笔记迁移至 `Notes/` 并重新命名以符合规范。
+    - [[OpenArm项目架构解析-franka_controllers_real]]（原项目架构解析）：整理为学习笔记，补全 Mermaid 架构图。
+    - [[OpenArm系统Servo配置与验证]]（原工作1）：整理为操作记录，优化了验证步骤描述。
+- 更新：
+    - [[OpenArm]] 项目主页索引。
+    - [[System/index.md]] 全局索引。

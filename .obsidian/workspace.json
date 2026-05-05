@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OpenClaw安装教程.md",
+                "file": "Projects/OpenArm/项目架构解析：`franka_controllers_real`.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "OpenClaw安装教程"
+              "title": "项目架构解析：`franka_controllers_real`"
             }
           }
         ]
@@ -185,6 +185,12 @@
   },
   "active": "09874664a5cdd26e",
   "lastOpenFiles": [
+    "Projects/OpenArm/项目日志.md",
+    "Projects/OpenArm/项目架构解析：`franka_controllers_real`.md",
+    "Projects/OpenArm/工作1.md",
+    "Projects/OpenArm/OpenArm.md",
+    "Notes/OpenArm系统启动与调试记录.md",
+    "System/log.md",
     "未命名.md",
     "OpenClaw安装教程.md"
   ]

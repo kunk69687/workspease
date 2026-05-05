@@ -17,12 +17,12 @@ status: active
 - 待进行物理验证。
 
 ## 笔记索引
-- [[项目架构解析：`franka_controllers_real`]]：详细解析了基于 ROS 2 的控制器实现、数据流及 VR 映射逻辑。
-- [[工作1]]：记录了 Servo 节点的配置、构建步骤及验证流程。
-- [[OpenArm系统启动与调试记录]]：汇总了 CAN 配置、系统启动、关节测试及零位校准的标准操作指令。
+- [[OpenArm项目架构解析-franka_controllers_real]]：深入解析了基于 ROS 2 的实时控制器实现、1000Hz 数据流及增量式 VR 映射逻辑。
+- [[OpenArm系统Servo配置与验证]]：记录了 MoveIt Servo 节点的详细配置、构建步骤及分阶段验证流程。
+- [[OpenArm系统启动与调试记录]]：汇总了 CAN 配置、SocketCAN 设置、系统启动、关节测试及零位校准的标准操作指令。
 
 ## 待办
-- [ ] 执行 Step 1 - Step 3：构建并启动主系统与 Servo 节点。
+- [ ] 执行 [[OpenArm系统Servo配置与验证]] 中的 Step 1 - Step 3：构建并启动主系统与 Servo 节点。
 - [ ] 执行 Step 4：手动验证 Servo 话题控制。
 - [ ] 执行 Step 5：接入 VR 设备进行真机遥操作测试。
 

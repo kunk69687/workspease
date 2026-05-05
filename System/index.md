@@ -1,5 +1,7 @@
 ## 机器人与 3D 视觉
 
+- [[OpenArm项目架构解析-franka_controllers_real]]：深入解析了基于 ROS 2 的实时控制器实现、1000Hz 数据流及增量式 VR 映射逻辑。
+- [[OpenArm系统Servo配置与验证]]：记录了 MoveIt Servo 节点的详细配置、构建步骤及分阶段验证流程。
 - [[OpenArm系统启动与调试记录]]：汇总了 OpenArm 的 CAN 配置、系统启动、关节测试及零位校准的标准操作流程。
 - [[机械臂操作空间控制笔记]]：整理了操作空间控制的基本原理、PD/PID 控制建模及抗干扰分析。
 - [[GraspNet项目与抓取数据集概览]]：记录了 GraspNet 生态下的核心数据集（1Billion, SuctionNet, TransCG）与 AnyGrasp 算法。
